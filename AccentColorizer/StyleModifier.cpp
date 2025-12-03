@@ -593,95 +593,94 @@ void ModifyStyles()
 	}
 	/////////////////////////////////////////////////////
 
-	if (g_winver < WIN_8)
+	// Windows under 8 check removed here
+
+	SetCurrentTheme(L"TaskDialog");
+	//
+	for (i = 1; i <= 8; i++)
 	{
-		SetCurrentTheme(L"TaskDialog");
-		//
-		for (i = 1; i <= 8; i++)
-		{
-			ModifyStyle(13, i, TMT_DIBDATA);
-		}
-
-
-		/////////////////////////////////////////////////////
-		SetCurrentTheme(L"Header");
-		//
-		for (i = 1; i <= 7; i++)
-		{
-			for (j = 1; j <= 12; j++)
-			{
-				for (k = 1; k <= 7; k++)
-				{
-					ModifyStyle(i, j, k);
-				}
-			}
-		}
-
-
-		SetCurrentTheme(L"ItemsView::Header");
-		//
-		for (i = 1; i <= 7; i++)
-		{
-			for (j = 1; j <= 12; j++)
-			{
-				for (k = 1; k <= 7; k++)
-				{
-					ModifyStyle(i, j, k);
-				}
-			}
-		}
-		/////////////////////////////////////////////////////
-
-
-		SetCurrentTheme(L"ScrollBar");
-		//
-		for (i = 1; i <= 10; i++)
-		{
-			for (k = 1; k <= 4; k++)
-			{
-				ModifyStyle(i, 0, k);
-			}
-		}
-
-		//
-		// Aero Basic
-		//
-
-
-		SetCurrentTheme(L"TaskBar2::TaskBar");
-		//
-		for (i = 1; i <= 8; i++)
-		{
-			ModifyStyle(i, 0, 0);
-		}
-
-
-		SetCurrentTheme(L"AltTab");
-		//
-		for (i = 1; i <= 11; i++)
-		{
-			ModifyStyle(i, 0, TMT_DIBDATA);
-		}
-
-
-		SetCurrentTheme(L"BasicMenuMode::TaskbandExtendedUI");
-		//
-		ModifyStyle(1, 0, 0);
-
-
-		SetCurrentTheme(L"Window");
-		//
-		for (i = 1; i <= 13; i++)
-		{
-			ModifyStyle(i, 0, 0);
-		}
-		ModifyStyle(15, 4, 0);
-		ModifyStyle(17, 4, 0);
-		ModifyStyle(18, 4, 0);
-		ModifyStyle(19, 4, 0);
-		ModifyStyle(21, 4, 0);
-		ModifyStyle(23, 4, 0);
+		ModifyStyle(13, i, TMT_DIBDATA);
 	}
+
+
+	/////////////////////////////////////////////////////
+	SetCurrentTheme(L"Header");
+	//
+	for (i = 1; i <= 7; i++)
+	{
+		for (j = 1; j <= 12; j++)
+		{
+			for (k = 1; k <= 7; k++)
+			{
+				ModifyStyle(i, j, k);
+			}
+		}
+	}
+
+
+	SetCurrentTheme(L"ItemsView::Header");
+	//
+	for (i = 1; i <= 7; i++)
+	{
+		for (j = 1; j <= 12; j++)
+		{
+			for (k = 1; k <= 7; k++)
+			{
+				ModifyStyle(i, j, k);
+			}
+		}
+	}
+	/////////////////////////////////////////////////////
+
+
+	SetCurrentTheme(L"ScrollBar");
+	//
+	for (i = 1; i <= 10; i++)
+	{
+		for (k = 1; k <= 4; k++)
+		{
+			ModifyStyle(i, 0, k);
+		}
+	}
+
+	//
+	// Aero Basic
+	//
+
+
+	SetCurrentTheme(L"TaskBar2::TaskBar");
+	//
+	for (i = 1; i <= 8; i++)
+	{
+		ModifyStyle(i, 0, 0);
+	}
+
+
+	SetCurrentTheme(L"AltTab");
+	//
+	for (i = 1; i <= 11; i++)
+	{
+		ModifyStyle(i, 0, TMT_DIBDATA);
+	}
+
+
+	SetCurrentTheme(L"BasicMenuMode::TaskbandExtendedUI");
+	//
+	ModifyStyle(1, 0, 0);
+
+
+	SetCurrentTheme(L"Window");
+	//
+	for (i = 1; i <= 13; i++)
+	{
+		ModifyStyle(i, 0, 0);
+	}
+	ModifyStyle(15, 4, 0);
+	ModifyStyle(17, 4, 0);
+	ModifyStyle(18, 4, 0);
+	ModifyStyle(19, 4, 0);
+	ModifyStyle(21, 4, 0);
+	ModifyStyle(23, 4, 0);
 
 	//
 	CloseThemeData(hTheme);
